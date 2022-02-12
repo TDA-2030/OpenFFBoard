@@ -1,0 +1,3 @@
+[submodule "my-vesc-board/bldc"]
+	path = my-vesc-board/bldc
+	url = https://github.com/TDA-2030/bldc.git

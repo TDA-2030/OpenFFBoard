@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name crf1)(type KiCad)(uri C:/Users/zhouli/Desktop/Simple-BLDC/Libraries/crf1.pretty)(options "")(descr ""))
+  (lib (name myp)(type KiCad)(uri C:/Users/zhouli/Desktop/Simple-BLDC/Libraries/myp.pretty)(options "")(descr ""))
+)
