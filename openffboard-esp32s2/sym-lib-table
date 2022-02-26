@@ -1,4 +1,4 @@
 (sym_lib_table
   (lib (name mylib)(type Legacy)(uri ${KIPRJMOD}/mylib.lib)(options "")(descr ""))
-  (lib (name esp32s2-openffb-rescue)(type Legacy)(uri ${KIPRJMOD}/esp32s2-openffb-rescue.lib)(options "")(descr ""))
+  (lib (name Espressif)(type Legacy)(uri ${KIPRJMOD}/kicad-libraries/libraries/Espressif.lib)(options "")(descr ""))
 )
