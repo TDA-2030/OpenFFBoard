@@ -4,9 +4,9 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 2
-Title ""
-Date ""
-Rev ""
+Title "ESP32-S2-OPENFFB"
+Date "2022-03-15"
+Rev "V1.1"
 Comp ""
 Comment1 ""
 Comment2 ""
@@ -539,4 +539,227 @@ F 3 "" H 2250 4900 50  0001 C CNN
 	1    2250 4900
 	1    0    0    -1  
 $EndComp
+$Comp
+L Interface_CAN_LIN:TJA1051T-3 U?
+U 1 1 6230AD0C
+P 7250 2100
+AR Path="/6230AD0C" Ref="U?"  Part="1" 
+AR Path="/621C4056/6230AD0C" Ref="U3"  Part="1" 
+F 0 "U3" H 6750 2650 50  0000 C CNN
+F 1 "TJA1051T-3" H 6950 2550 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 7250 1600 50  0001 C CIN
+F 3 "http://www.nxp.com/documents/data_sheet/TJA1051.pdf" H 7250 2100 50  0001 C CNN
+	1    7250 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 6230AD12
+P 6750 2200
+AR Path="/6230AD12" Ref="#PWR?"  Part="1" 
+AR Path="/621C4056/6230AD12" Ref="#PWR03"  Part="1" 
+F 0 "#PWR03" H 6750 2050 50  0001 C CNN
+F 1 "+3.3V" V 6750 2450 50  0000 C CNN
+F 2 "" H 6750 2200 50  0001 C CNN
+F 3 "" H 6750 2200 50  0001 C CNN
+	1    6750 2200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 6230AD18
+P 7400 1650
+AR Path="/6230AD18" Ref="C?"  Part="1" 
+AR Path="/621C4056/6230AD18" Ref="C3"  Part="1" 
+F 0 "C3" V 7148 1650 50  0000 C CNN
+F 1 "10uf" V 7239 1650 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 7438 1500 50  0001 C CNN
+F 3 "~" H 7400 1650 50  0001 C CNN
+	1    7400 1650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7250 1500 7250 1650
+Connection ~ 7250 1650
+Wire Wire Line
+	7250 1650 7250 1700
+$Comp
+L power:GND #PWR?
+U 1 1 6230AD21
+P 7550 1650
+AR Path="/6230AD21" Ref="#PWR?"  Part="1" 
+AR Path="/621C4056/6230AD21" Ref="#PWR06"  Part="1" 
+F 0 "#PWR06" H 7550 1400 50  0001 C CNN
+F 1 "GND" H 7555 1477 50  0000 C CNN
+F 2 "" H 7550 1650 50  0001 C CNN
+F 3 "" H 7550 1650 50  0001 C CNN
+	1    7550 1650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6230AD27
+P 7250 2500
+AR Path="/6230AD27" Ref="#PWR?"  Part="1" 
+AR Path="/621C4056/6230AD27" Ref="#PWR05"  Part="1" 
+F 0 "#PWR05" H 7250 2250 50  0001 C CNN
+F 1 "GND" H 7255 2327 50  0000 C CNN
+F 2 "" H 7250 2500 50  0001 C CNN
+F 3 "" H 7250 2500 50  0001 C CNN
+	1    7250 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 6230AD2D
+P 8100 2050
+AR Path="/6230AD2D" Ref="R?"  Part="1" 
+AR Path="/621C4056/6230AD2D" Ref="R15"  Part="1" 
+F 0 "R15" H 8170 2096 50  0000 L CNN
+F 1 "120Ω" H 8170 2005 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 8030 2050 50  0001 C CNN
+F 3 "~" H 8100 2050 50  0001 C CNN
+	1    8100 2050
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 6230AD33
+P 7250 1500
+AR Path="/6230AD33" Ref="#PWR?"  Part="1" 
+AR Path="/621C4056/6230AD33" Ref="#PWR04"  Part="1" 
+F 0 "#PWR04" H 7250 1350 50  0001 C CNN
+F 1 "+5V" H 7265 1673 50  0000 C CNN
+F 2 "" H 7250 1500 50  0001 C CNN
+F 3 "" H 7250 1500 50  0001 C CNN
+	1    7250 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7750 2000 7750 1900
+Wire Wire Line
+	7750 1900 8100 1900
+Wire Wire Line
+	8100 2200 7750 2200
+Wire Wire Line
+	6300 1900 6750 1900
+Wire Wire Line
+	6750 2000 6300 2000
+Wire Wire Line
+	6300 2300 6750 2300
+$Comp
+L Connector:Conn_01x02_Male J?
+U 1 1 6230AD46
+P 8900 2200
+AR Path="/6230AD46" Ref="J?"  Part="1" 
+AR Path="/621C4056/6230AD46" Ref="J3"  Part="1" 
+F 0 "J3" H 8872 2082 50  0000 R CNN
+F 1 "CAN_Connector" H 8950 2000 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 8900 2200 50  0001 C CNN
+F 3 "~" H 8900 2200 50  0001 C CNN
+F 4 "~" H 8900 2200 50  0001 C CNN "Datasheet"
+F 5 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 8900 2200 50  0001 C CNN "Footprint"
+F 6 "J3" H 8900 2200 50  0001 C CNN "Reference"
+F 7 "Conn_01x02_Male" H 8900 2200 50  0001 C CNN "Value"
+	1    8900 2200
+	-1   0    0    1   
+$EndComp
+Connection ~ 8100 2200
+Wire Wire Line
+	8300 2100 8300 1900
+Wire Wire Line
+	8300 1900 8100 1900
+Connection ~ 8100 1900
+Text HLabel 6300 1900 0    50   Input ~ 0
+CAN_TX
+Text HLabel 6300 2000 0    50   Input ~ 0
+CAN_RX
+Text HLabel 6300 2300 0    50   Input ~ 0
+CAN_S
+$Comp
+L power:GND #PWR?
+U 1 1 6234F9DD
+P 3900 3650
+AR Path="/6234F9DD" Ref="#PWR?"  Part="1" 
+AR Path="/621C4056/6234F9DD" Ref="#PWR08"  Part="1" 
+F 0 "#PWR08" H 3900 3400 50  0001 C CNN
+F 1 "GND" H 3905 3477 50  0000 C CNN
+F 2 "" H 3900 3650 50  0001 C CNN
+F 3 "" H 3900 3650 50  0001 C CNN
+	1    3900 3650
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 6234F9E3
+P 4400 3650
+AR Path="/6234F9E3" Ref="#PWR?"  Part="1" 
+AR Path="/621C4056/6234F9E3" Ref="#PWR09"  Part="1" 
+F 0 "#PWR09" H 4400 3500 50  0001 C CNN
+F 1 "+5V" V 4415 3823 50  0000 C CNN
+F 2 "" H 4400 3650 50  0001 C CNN
+F 3 "" H 4400 3650 50  0001 C CNN
+	1    4400 3650
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 6234F9F0
+P 4400 3750
+AR Path="/6234F9F0" Ref="#PWR?"  Part="1" 
+AR Path="/621C4056/6234F9F0" Ref="#PWR010"  Part="1" 
+F 0 "#PWR010" H 4400 3600 50  0001 C CNN
+F 1 "+3.3V" V 4400 3950 50  0000 C CNN
+F 2 "" H 4400 3750 50  0001 C CNN
+F 3 "" H 4400 3750 50  0001 C CNN
+	1    4400 3750
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x08_Odd_Even J?
+U 1 1 6234F9FF
+P 4100 3950
+AR Path="/6234F9FF" Ref="J?"  Part="1" 
+AR Path="/621C4056/6234F9FF" Ref="J4"  Part="1" 
+F 0 "J4" H 4150 4467 50  0000 C CNN
+F 1 "Motor Driver" H 4300 4400 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x08_P2.54mm_Vertical" H 4100 3950 50  0001 C CNN
+F 3 "~" H 4100 3950 50  0001 C CNN
+	1    4100 3950
+	1    0    0    -1  
+$EndComp
+Text HLabel 3900 3750 0    50   Input ~ 0
+MT_RESET
+Text HLabel 3900 3850 0    50   Input ~ 0
+MT_MOSI
+Text HLabel 3900 3950 0    50   Input ~ 0
+MT_CS1
+Text HLabel 3900 4050 0    50   Input ~ 0
+MT_CS2
+Text HLabel 3900 4150 0    50   Input ~ 0
+DRV_FLAG
+Text HLabel 3900 4250 0    50   Input ~ 0
+MT_VEXT
+Text HLabel 3900 4350 0    50   Input ~ 0
+MT_GPIO_DRV
+Text HLabel 4400 3850 2    50   Input ~ 0
+MT_MISO
+Text HLabel 4400 3950 2    50   Input ~ 0
+MT_SCK
+Text HLabel 4400 4050 2    50   Input ~ 0
+MT_CS3
+Text HLabel 4400 4150 2    50   Input ~ 0
+MT_BRAKE
+Text HLabel 4400 4250 2    50   Input ~ 0
+MT_VINT
+Text HLabel 4400 4350 2    50   Input ~ 0
+MT_ENABLE
+Wire Wire Line
+	8300 2100 8700 2100
+Wire Wire Line
+	8100 2200 8700 2200
+Text Label 8400 2100 0    50   ~ 0
+CANH
+Text Label 8400 2200 0    50   ~ 0
+CANL
 $EndSCHEMATC
