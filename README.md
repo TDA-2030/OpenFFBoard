@@ -14,14 +14,13 @@ ESP32 的源码已提交 Pull Request 到原项目，支持的功能以及进度
 ```
 ├── LICENSE                <- 开源协议 >
 ├── my-vesc-board          <- VESC 板 >
-│   └── brake-board        <- VESC 刹车电阻板 >
 ├── openffboard-esp32s2    <- OpenFFBoard 主控板 >
 └── README.md              <- 此文件 >
 ```
 
 ## 固件烧录
 
-不想搭建编译环境可以直接烧录编译好的 [bin](https://github.com/TDA-2030/OpenFFBoard/blob/feature/add_esp32s2/Firmware/Targets/ESP32SX/openffb-esp32s2.bin) 文件 
+不想搭建编译环境可以直接烧录编译好的 [bin](https://github.com/TDA-2030/OpenFFBoard/tree/feature/add_esp32s2/Firmware/Targets/ESP32SX/firmware) 文件 
 
 ### 烧录方法
 

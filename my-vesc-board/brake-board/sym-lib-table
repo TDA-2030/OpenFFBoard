@@ -1,4 +1,0 @@
-(sym_lib_table
-  (lib (name crf_1)(type Legacy)(uri C:/Users/zhouli/Desktop/Simple-BLDC/Libraries/crf_1.lib)(options "")(descr ""))
-  (lib (name mylib)(type Legacy)(uri C:/Users/zhouli/Desktop/Simple-BLDC/Libraries/mylib.lib)(options "")(descr ""))
-)
