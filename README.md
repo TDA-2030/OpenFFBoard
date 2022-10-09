@@ -32,3 +32,7 @@ ESP32 控制板的源码已提交 Pull Request 到原项目，支持的功能以
 ## 组装好的样子
 
 <img src="assembly.gif" alt="assembly" width=500 />
+
+## 测试工具
+
+[WheelTest](./WheelTest.rar) 提供了一个测试力反馈功能是否正常的软件

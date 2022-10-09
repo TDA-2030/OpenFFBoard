@@ -30,11 +30,11 @@ Simple-BLDC 是基于 VESC6 的一个低成本实现方案，在硬件上兼容 
 
 ## 固件源码
 
-板子兼容[原版固件](https://github.com/vedderb/bldc)，但是为配合 OpenFFboard 使用，需要最新的开发分支，由于还未release，这里先提供编译好的 bin 文件供烧录 [BLDC_4_ChibiOS.bin](BLDC_4_ChibiOS.bin)，
+板子兼容[原版固件](https://github.com/vedderb/bldc)，专门适配的固件新增了制动电阻功能，你可以在 [bldc](https://github.com/TDA-2030/bldc/tree/hw_simple_bldc) 中看到对应的源代码。如何编译固件请参考[这里](https://github.com/TDA-2030/bldc/tree/hw_simple_bldc#prerequisites)，目前只提供在 linux 和 MacOS 编译的说明，Windows 编译会麻烦一些需要自行想办法。
 
 ## 上位机工具 VESC-TOOL
 
-固件对应的 VESC-TOOL 版本为 `3.01`，在此[下载](https://github.com/manoukianv/vescFirmware4OpenFFBoard/releases/download/dev_fw_5_0_3_b51/vesc_tools_3.0.1_51b.zip)
+固件对应的 VESC-TOOL 版本为 `3.01`，在此[下载](./vesc_tool_3.01.exe)
 
 ## 制动电阻功能
 
@@ -42,6 +42,8 @@ Simple-BLDC 是基于 VESC6 的一个低成本实现方案，在硬件上兼容 
 该功能需要在板子背面焊接上一个功率电阻，如下图：
 
 ![simple_bldc_back](Images/simple_bldc_back.png)
+
+电阻阻值一般为 1Ω 或 2Ω。
 
 > 注意：制动电阻功能是在有点笨的保持电压在电机空闲时的输入电压，所以当电机在运行，并且你的输入电压在升高，那么制动电阻将会从电源消耗电流，电流值与变化的电压差值成正比。
 
